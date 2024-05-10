@@ -270,14 +270,35 @@
         let currentTestimonialGroup = 0;
 
         function showNextTestimonials() {
-            currentTestimonialGroup = (currentTestimonialGroup + 1) % (testimonials.children.length);
-            testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
-        }
+  currentTestimonialGroup = (currentTestimonialGroup + 1) % testimonials.children.length;
+  testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
+  updateArrowVisibility();
+}
 
-        function showPreviousTestimonials() {
-            currentTestimonialGroup = (currentTestimonialGroup - 1 + testimonials.children.length) % (testimonials.children.length);
-            testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
-        }
+function showPreviousTestimonials() {
+  currentTestimonialGroup = (currentTestimonialGroup - 1 + testimonials.children.length) % testimonials.children.length;
+  testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
+  updateArrowVisibility();
+}
+
+function updateArrowVisibility() {
+  const leftArrow = document.querySelector('.arrow-left');
+  const rightArrow = document.querySelector('.arrow-right');
+
+  if (currentTestimonialGroup === 0) {
+    leftArrow.style.display = 'none';
+  } else {
+    leftArrow.style.display = 'flex';
+  }
+
+  if (currentTestimonialGroup === testimonials.children.length - 1) {
+    rightArrow.style.display = 'none';
+  } else {
+    rightArrow.style.display = 'flex';
+  }
+}
+
+updateArrowVisibility();
 
         function sendEmail(event) {
   event.preventDefault();
