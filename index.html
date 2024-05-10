@@ -108,6 +108,7 @@
             list-style-type: disc;
             margin-left: 20px;
         }
+        
         .testimonials-container {
             position: relative;
             overflow: hidden;
@@ -155,10 +156,11 @@
             cursor: pointer;
         }
         .arrow-left {
-            left: 10px;
+          left: 10px;
         }
+
         .arrow-right {
-            right: 10px;
+          right: 10px;
         }
     </style>
 </head>
@@ -171,35 +173,47 @@
     <main>
         <section>
             <h2><span class="emoji">👋</span>Hello, systems thinker.</h2>
-            <p>If you love life optimization and hate not having enough time for what matters most, I can help you. My executive coaching methodology centers around experiments that put creativity at the forefront of professional and personal endeavors. This approach to lifestyle design propels leaders toward greater impact and deeper fulfillment.</p>
+            <p>If you love life optimization and hate not having enough bandwidth for what matters most, I can help you. My executive coaching methodology centers around experiments that put creativity at the forefront of professional and personal endeavors. This approach to lifestyle design propels leaders toward greater impact and deeper fulfillment.</p>
         </section>
-        
+
         <section>
-            <h2><span class="emoji">🗺️</span>How it works</h2>
-            <ul class="adventure-list">
+            <h2><span class="emoji">⚙️</span>How It Works</h2>
+            <ol class="adventure-list">
                 <li>
-                    <strong>1:1 session</strong>
-                    <ul>
-                        <li>Initial 30-minute systems thinking session</li>
-                    </ul>
+                    <strong>1:1 Systems Thinking Session (30 minutes)</strong>
+                    <p>Start with a strategic session to identify your key goals and the methods we'll use to achieve them, focusing on systems thinking principles.</p>
                 </li>
                 <li>
-                    <strong>Life experiment</strong>
-                    <ul>
-                        <li>Initial 30-minute systems thinking session</li>
-                        <li>Half day personal retreat to design a life experiment for your life</li>
-                        <li>50-minute follow-up session</li>
-                    </ul>
+                    <strong>Personalized Half-Day Retreat</strong>
+                    <p>Spend a half-day in a session designed to plan your life experiment. We'll outline specific objectives, set timelines, and prepare detailed steps for implementation.</p>
                 </li>
-            </ul>
+                <li>
+                    <strong>Implementation and Monitoring</strong>
+                    <p>Implement the strategies developed during the retreat. This phase includes regular monitoring and adjustments to ensure adherence to the plan and progress towards goals.</p>
+                </li>
+                <li>
+                    <strong>Evaluation and Planning Session (50 minutes)</strong>
+                    <p>End with a session to evaluate the outcomes of your experiment. We'll review achievements, analyze challenges, and define next steps for continuous improvement.</p>
+                </li>
+            </ol>
         </section>
+
         <section>
-            <h2><span class="emoji">🚀</span>Getting started is simple</h2>
-            <ul class="getting-started">
-                <li><strong>Step 1:</strong> Establish key targets during a systems thinking session with me</li>
-                <li><strong>Step 2:</strong> Design a life experiment, choose a start and end date and press go</li>
-                <li><strong>Step 3:</strong> Follow up call at the completion of your life experiment</li>
-            </ul>
+            <h2><span class="emoji">✅</span>Getting Started is Simple</h2>
+            <ol class="getting-started">
+                <li>
+                    <strong>Step 1: Book a Discovery Call</strong>
+                    <p>Schedule an introductory call to discuss your aspirations and how my coaching can help. This call sets the foundation for our collaboration.</p>
+                </li>
+                <li>
+                    <strong>Step 2: Design Your Life Experiment</strong>
+                    <p>In our first discussion, we will develop a tailored plan with clear targets and steps. This plan is designed to ensure measurable progress.</p>
+                </li>
+                <li>
+                    <strong>Step 3: Review and Reflect</strong>
+                    <p>After completing your plan, we reconvene to assess the results and distill key learnings.</p>
+                </li>
+            </ol>
         </section>
         <section>
             <h2><span class="emoji">💬</span>Testimonials</h2>
@@ -270,68 +284,58 @@
         let currentTestimonialGroup = 0;
 
         function showNextTestimonials() {
-  currentTestimonialGroup = (currentTestimonialGroup + 1) % testimonials.children.length;
-  testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
-  updateArrowVisibility();
-}
+          currentTestimonialGroup = (currentTestimonialGroup + 1) % testimonials.children.length;
+          testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
+          updateArrowVisibility();
+        }
 
-function showPreviousTestimonials() {
-  currentTestimonialGroup = (currentTestimonialGroup - 1 + testimonials.children.length) % testimonials.children.length;
-  testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
-  updateArrowVisibility();
-}
+        function showPreviousTestimonials() {
+          currentTestimonialGroup = (currentTestimonialGroup - 1 + testimonials.children.length) % testimonials.children.length;
+          testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
+          updateArrowVisibility();
+        }
 
-function updateArrowVisibility() {
-  const leftArrow = document.querySelector('.arrow-left');
-  const rightArrow = document.querySelector('.arrow-right');
+        function updateArrowVisibility() {
+          const leftArrow = document.querySelector('.arrow-left');
+          const rightArrow = document.querySelector('.arrow-right');
 
-  if (currentTestimonialGroup === 0) {
-    leftArrow.style.display = 'none';
-  } else {
-    leftArrow.style.display = 'flex';
-  }
+          if (currentTestimonialGroup === 0) {
+            leftArrow.style.display = 'none';
+          } else {
+            leftArrow.style.display = 'flex';
+          }
 
-  if (currentTestimonialGroup === testimonials.children.length - 1) {
-    rightArrow.style.display = 'none';
-  } else {
-    rightArrow.style.display = 'flex';
-  }
-}
+          if (currentTestimonialGroup === testimonials.children.length - 1) {
+            rightArrow.style.display = 'none';
+          } else {
+            rightArrow.style.display = 'flex';
+          }
+        }
 
-updateArrowVisibility();
+        updateArrowVisibility();
 
         function sendEmail(event) {
-  event.preventDefault();
+            event.preventDefault();
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
 
-  const formData = new FormData();
-  formData.append('name', name);
-  formData.append('email', email);
-  formData.append('phone', phone);
-  formData.append('message', message);
+            const emailBody = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
 
-  fetch('send_email.php', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => response.text())
-  .then(result => {
-    document.getElementById('success-message').textContent = "Your message has landed safely in my inbox. You'll hear from me soon. I look forward to connecting with you!";
-    document.getElementById('success-message').style.display = 'block';
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('message').value = '';
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    alert('An error occurred while sending the email. Please try again later.');
-  });
-}
+            const mailtoLink = `mailto:helloabbydiamond@gmail.com?subject=New Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
+
+            window.location.href = mailtoLink;
+
+            document.getElementById('success-message').textContent = "Your message has landed safely in my inbox. You'll hear from me soon. I look forward to connecting with you!";
+            document.getElementById('success-message').style.display = 'block';
+
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('message').value = '';
+        }
     </script>
 </body>
 </html>
