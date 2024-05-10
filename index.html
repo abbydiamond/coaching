@@ -267,16 +267,18 @@
             </div>
         </section>
         <section>
-            <h2><span class="emoji">✅</span>Get in touch</h2>
-            <form class="contact-form" onsubmit="sendEmail(event)">
-                <input type="text" id="name" placeholder="Full name" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="tel" id="phone" placeholder="Phone number">
-                <textarea id="message" placeholder="Share anything"></textarea>
-                <button type="submit">Let's build.</button>
-            </form>
-            <div id="success-message" class="success-message" style="display: none;"></div>
-        </section>
+  <h2><span class="emoji">✅</span>Get in touch</h2>
+
+  <form id="contact-form" data-service-id="your_service_id" data-template-params='{"from_name": "Your Name", "reply_to": "your@email.com"}' onsubmit="sendEmail(event)">
+    <input type="text" id="name" name="name" placeholder="Full name" required>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <input type="tel" id="phone" name="phone" placeholder="Phone number">
+    <textarea id="message" name="message" placeholder="Share anything"></textarea>
+    <button type="submit">Let's build.</button>
+  </form>
+
+  <div id="success-message" class="success-message" style="display: none;"></div>
+</section>
     </main>
     <script>
         const testimonials = document.querySelector('.testimonials');
@@ -317,27 +319,15 @@
         function sendEmail(event) {
   event.preventDefault();
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const message = document.getElementById('message').value;
+  const serviceId = 'service_hvrcpls'; // Replace with your actual EmailJS service ID
+  const contactForm = document.getElementById('contact-form');
 
-  const formData = {
-    name: name,
-    email: email,
-    phone: phone,
-    message: message
-  };
-
-  emailjs.send('service_hvrcpls', '', formData, 'asVK_Gg6XDEIgWAlO')
+  emailjs.sendForm(serviceId, contactForm, contactForm)
     .then(function(response) {
       console.log('Email sent successfully!', response.status, response.text);
       document.getElementById('success-message').textContent = "Your message has landed safely in my inbox. You'll hear from me soon. I look forward to connecting with you!";
       document.getElementById('success-message').style.display = 'block';
-      document.getElementById('name').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('phone').value = '';
-      document.getElementById('message').value = '';
+      contactForm.reset();
     }, function(error) {
       console.error('Error sending email:', error);
       alert('An error occurred while sending the email. Please try again later.');
