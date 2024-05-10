@@ -215,7 +215,7 @@
                             <cite>- Anas Atfi, Creating Generational Wealth Through Residential Mortgages One Family and Investor AT A Time</cite>
                         </div>
                         <div class="testimonial">
-                            <p>"Abby is a dear friend of mine, and it's been incredible to see her evolution. She understands me at a level deeper than many of my family members. She's not afraid to explore the depths and is able to challenge the status quo of my disempowering beliefs. She also helps me see the impact I have in the world and how to leverage my community/relationships in a way that is authentic and empowering. Her genuine curiosity and drive to become better are inspiring. It's been a privilege to witness not only her growth but also how her leadership has flourished through real-world practice (designing the executive coaching curriculum at Athena, etc). What Abby does best is creativity and asking the difficult questions. She's a true testament to testing the waters and not being afraid to execute on her vision, creating something from nothing. Feel free to reach out to me with any questions, I'll be more than glad to answer them. If you are seeking a coach who genuinely cares there is nobody better than AD!"</p>
+                            <p>"Abby understands me at a level deeper than many of my family members. She's not afraid to explore the depths and is able to challenge the status quo of my disempowering beliefs. She also helps me see the impact I have in the world and how to leverage my community/relationships in a way that is authentic and empowering. Her genuine curiosity and drive to become better are inspiring. What Abby does best is creativity and asking the difficult questions. She's a true testament to testing the waters and not being afraid to execute on her vision, creating something from nothing. If you are seeking a coach who genuinely cares there is nobody better than AD!"</p>
                             <cite>- Davidson Hang, I coach SDRs get promoted to AEs | Managing Partner at Valenta</cite>
                         </div>
                     </div>
@@ -254,13 +254,14 @@
         </section>
         <section>
             <h2><span class="emoji">✅</span>Get in touch</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Full name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="tel" placeholder="Phone number">
-                <textarea placeholder="Share anything"></textarea>
+            <form class="contact-form" onsubmit="sendEmail(event)">
+                <input type="text" id="name" placeholder="Full name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone number">
+                <textarea id="message" placeholder="Share anything"></textarea>
                 <button type="submit">Let's build.</button>
             </form>
+            <div id="success-message" class="success-message" style="display: none;"></div>
         </section>
     </main>
     <script>
@@ -276,6 +277,29 @@
         function showPreviousTestimonials() {
             currentTestimonialGroup = (currentTestimonialGroup - 1 + testimonials.children.length) % (testimonials.children.length);
             testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
+        }
+
+        function sendEmail(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            const emailBody = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+
+            const mailtoLink = `mailto:helloabbydiamond@gmail.com?subject=New Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
+
+            window.location.href = mailtoLink;
+
+            document.getElementById('success-message').textContent = "Your message has landed safely in my inbox. You'll hear from me soon. I look forward to connecting with you!";
+            document.getElementById('success-message').style.display = 'block';
+
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('message').value = '';
         }
     </script>
 </body>
