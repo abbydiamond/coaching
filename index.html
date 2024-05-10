@@ -110,58 +110,61 @@
         }
         
         .testimonials-container {
-            position: relative;
-            overflow: hidden;
-        }
-        .testimonials {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        .testimonial-group {
-            flex: 0 0 100%;
-            display: flex;
-            justify-content: space-between;
-            min-width: 100%;
-        }
-        .testimonial {
-            flex: 0 0 calc(33.33% - 20px);
-            padding: 30px;
-            background-color: #f7f6f3;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-right: 20px;
-        }
-        .testimonial:last-child {
-            margin-right: 0;
-        }
-        .testimonial p {
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-        .testimonial cite {
-            font-weight: bold;
-            font-style: normal;
-        }
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        .arrow-left {
-          left: 10px;
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+      }
 
-        .arrow-right {
-          right: 10px;
-        }
+      .testimonial-card {
+        background-color: #f7f6f3;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .testimonial-excerpt {
+        font-style: italic;
+        margin-bottom: 10px;
+      }
+
+      .testimonial-author {
+        font-weight: bold;
+      }
+
+      .testimonial-details {
+        display: none;
+        margin-top: 20px;
+      }
+
+      .testimonial-details p {
+        margin-bottom: 10px;
+      }
+
+      .testimonial-card.hidden {
+        display: none;
+      }
+
+      .show-more-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .testimonial-details.show {
+        display: block;
+      }
     </style>
 </head>
 <body>
@@ -216,57 +219,59 @@
             </ol>
         </section>
         <section>
-            <h2><span class="emoji">💬</span>Testimonials</h2>
-            <div class="testimonials-container">
-                <div class="testimonials">
-                    <div class="testimonial-group">
-                        <div class="testimonial">
-                            <p>"Abby is one of the most effective coaches (tactical tools with strategic goals) I have ever worked with."</p>
-                            <cite>- Sunil Kanderi, Co-founder and Managing Director at Nagarro</cite>
-                        </div>
-                        <div class="testimonial">
-                            <p>"Abby has a gift. She created a safe space during our breakthrough executive coaching session where my true self expression showed up. After the session, I feel unstoppable."</p>
-                            <cite>- Anas Atfi, Creating Generational Wealth Through Residential Mortgages One Family and Investor AT A Time</cite>
-                        </div>
-                        <div class="testimonial">
-                            <p>"Abby understands me at a level deeper than many of my family members. She's not afraid to explore the depths and is able to challenge the status quo of my disempowering beliefs. She also helps me see the impact I have in the world and how to leverage my community/relationships in a way that is authentic and empowering. Her genuine curiosity and drive to become better are inspiring. What Abby does best is creativity and asking the difficult questions. She's a true testament to testing the waters and not being afraid to execute on her vision, creating something from nothing. If you are seeking a coach who genuinely cares there is nobody better than AD!"</p>
-                            <cite>- Davidson Hang, I coach SDRs get promoted to AEs | Managing Partner at Valenta</cite>
-                        </div>
-                    </div>
-                    <div class="testimonial-group">
-                        <div class="testimonial">
-                            <p>"During my one hour executive coaching session with Abby, I accomplished something that probably would have taken me a year otherwise. The session was brilliant. Super, super helpful. I'm kind of blown away. I feel really excited and at peace at the same time. Abby, I appreciate you for this conversation - for seeing the potential in my business, pulling me forward, and creating an easy path for my team to take all of the needed next steps. You really broke the goal down into very specific action items and ongoing rituals so that my team knows exactly what they need to do. You made it so easy!"</p>
-                            <cite>- Julie Tran, Women-Centered Marriage Coach</cite>
-                        </div>
-                        <div class="testimonial">
-                            <p>"Abby Diamond, you're an absolute miracle of a human. My whole career, I've been gassed up by all these coaches telling me "you can do this!" but you're the only coach who has given me realistic, strategic, practical, pragmatic focus so that what I'm building can sustain itself. Executive coaching with you created friction that allowed me to light a spark that has now spread into wildfire. It's such a feeling of excitement and incentive to create impact and lasting change in the world. Thank you!!"</p>
-                            <cite>- Alexander Stoeber, Dreaming every goal into a game worth winning</cite>
-                        </div>
-                        <div class="testimonial">
-                            <p>"Abby Diamond is one of the best coaches I have ever worked with. Her perspective is unlimited and magical. She is empathetic, while uncompromising in the way she listens to me as someone who can create powerfully in my life."</p>
-                            <cite>- Meghann White, Founder at To The Mountain Shuts</cite>
-                        </div>
-                    </div>
-                    <div class="testimonial-group">
-                        <div class="testimonial">
-                            <p>"After my breakthrough executive coaching session with Abby, I feel like a weight has been lifted. Reading business books can feel so black and white, but Abby's energy and her friendliness brought these ideas to life. Her coaching brought meaning, energy, and vibrance. Because of our session, the conceptual business goals that I initially brought to her have now become a clear, simple framework that I can follow and always reference."</p>
-                            <cite>- Lanette Radi, I help business owners keep their finances clean, fresh, and sparkly enabling them to focus on expansion without having to worry about the stress of disorganized books or daunting tax seasons.</cite>
-                        </div>
-                        <div class="testimonial">
-                            <p>"Abby is an exceptional coach. I've worked with her for the better part of a year on delegation strategy, time management, and aligning my profession with what truly energizes me. She's frameworked, thoughtful, and a great partner."</p>
-                            <cite>- Nitin Gupta, VP, Strategy & BD at Pave</cite>
-                        </div>
-                        <div class="testimonial">
-                            <p>"As an executive coach, Abby Diamond is outside of the box. I would describe her coaching style as profoundly engaged, vibrant, alive, compassionate, fresh, and innovative."</p>
-                            <cite>- Mira Lathrop, Senior Consultant @ Vanto Group</cite>
-                        </div>
-                    </div>
-                </div>
-                <button class="arrow arrow-left" onclick="showPreviousTestimonials()">&lt;</button>
-                <button class="arrow arrow-right" onclick="showNextTestimonials()">&gt;</button>
-            </div>
-        </section>
-        <section class="banner" style="display: flex; justify-content: space-between; align-items: center; background-color: #e8f4f8; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'Helvetica', sans-serif;">
+    <h2><span class="emoji">💬</span>Testimonials</h2>
+    <div class="testimonials-container">
+      <div class="testimonial-card">
+        <p class="testimonial-excerpt">"Abby is one of the most effective coaches (tactical tools with strategic goals) I have ever worked with."</p>
+        <cite class="testimonial-author">- Sunil Kanderi, Co-founder and Managing Director at Nagarro</cite>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-excerpt">"Abby has a gift. She created a safe space during our breakthrough executive coaching session where my true self expression showed up. After the session, I feel unstoppable."</p>
+        <cite class="testimonial-author">- Anas Atfi, Creating Generational Wealth Through Residential Mortgages One Family and Investor AT A Time</cite>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-excerpt">"Abby understands me at a level deeper than many of my family members. She's not afraid to explore the depths and is able to challenge the status quo of my disempowering beliefs."</p>
+        <cite class="testimonial-author">- Davidson Hang, I coach SDRs get promoted to AEs | Managing Partner at Valenta</cite>
+      </div>
+
+      <div class="testimonial-card hidden">
+        <p class="testimonial-excerpt">"During my one hour executive coaching session with Abby, I accomplished something that probably would have taken me a year otherwise. The session was brilliant. Super, super helpful. I'm kind of blown away."</p>
+        <cite class="testimonial-author">- Julie Tran, Women-Centered Marriage Coach</cite>
+      </div>
+
+      <div class="testimonial-card hidden">
+        <p class="testimonial-excerpt">"Abby Diamond, you're an absolute miracle of a human. My whole career, I've been gassed up by all these coaches telling me "you can do this!" but you're the only coach who has given me realistic, strategic, practical, pragmatic focus so that what I'm building can sustain itself."</p>
+        <cite class="testimonial-author">- Alexander Stoeber, Dreaming every goal into a game worth winning</cite>
+      </div>
+
+      <div class="testimonial-card hidden">
+        <p class="testimonial-excerpt">"Abby Diamond is one of the best coaches I have ever worked with. Her perspective is unlimited and magical. She is empathetic, while uncompromising in the way she listens to me as someone who can create powerfully in my life."</p>
+        <cite class="testimonial-author">- Meghann White, Founder at To The Mountain Shuts</cite>
+      </div>
+
+      <div class="testimonial-card hidden">
+        <p class="testimonial-excerpt">"After my breakthrough executive coaching session with Abby, I feel like a weight has been lifted. Reading business books can feel so black and white, but Abby's energy and her friendliness brought these ideas to life."</p>
+        <cite class="testimonial-author">- Lanette Radi, I help business owners keep their finances clean, fresh, and sparkly enabling them to focus on expansion without having to worry about the stress of disorganized books or daunting tax seasons.</cite>
+      </div>
+
+      <div class="testimonial-card hidden">
+        <p class="testimonial-excerpt">"Abby is an exceptional coach. I've worked with her for the better part of a year on delegation strategy, time management, and aligning my profession with what truly energizes me. She's frameworked, thoughtful, and a great partner."</p>
+        <cite class="testimonial-author">- Nitin Gupta, VP, Strategy &amp; BD at Pave</cite>
+      </div>
+
+      <div class="testimonial-card hidden">
+        <p class="testimonial-excerpt">"As an executive coach, Abby Diamond is outside of the box. I would describe her coaching style as profoundly engaged, vibrant, alive, compassionate, fresh, and innovative."</p>
+        <cite class="testimonial-author">- Mira Lathrop, Senior Consultant @ Vanto Group</cite>
+      </div>
+    </div>
+
+    <button class="show-more-btn" onclick="showMoreTestimonials()">Show More</button>
+  </section>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <section class="banner" style="display: flex; justify-content: space-between; align-items: center; background-color: #e8f4f8; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'Helvetica', sans-serif;">
       <div style="flex: 1; padding-right: 20px;">
           <h2>📞 Get in touch</h2>
           <p style="font-size: 18px;">Define your life experiment, set value-driven goals, and create a massive action plan with me.</p>
@@ -275,88 +280,33 @@
           Schedule your discovery call now
       </a>
   </section>
-    </main>
+
+
+
+
+</main>
     <script>
-        const testimonials = document.querySelector('.testimonials');
-        const testimonialGroupWidth = testimonials.querySelector('.testimonial-group').offsetWidth;
-        let currentTestimonialGroup = 0;
+      function toggleTestimonialDetails(card) {
+        const details = card.querySelector('.testimonial-details');
+        details.classList.toggle('show');
+      }
 
-        function showNextTestimonials() {
-          currentTestimonialGroup = (currentTestimonialGroup + 1) % testimonials.children.length;
-          testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
-          updateArrowVisibility();
+      function showMoreTestimonials() {
+        const hiddenTestimonials = document.querySelectorAll('.testimonial-card.hidden');
+        const showMoreBtn = document.querySelector('.show-more-btn');
+
+        if (hiddenTestimonials.length > 0) {
+          hiddenTestimonials.forEach((testimonial, index) => {
+            if (index < 3) {
+              testimonial.classList.remove('hidden');
+            }
+          });
         }
 
-        function showPreviousTestimonials() {
-          currentTestimonialGroup = (currentTestimonialGroup - 1 + testimonials.children.length) % testimonials.children.length;
-          testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
-          updateArrowVisibility();
+        if (document.querySelectorAll('.testimonial-card.hidden').length === 0) {
+          showMoreBtn.style.display = 'none';
         }
-
-        function updateArrowVisibility() {
-          const leftArrow = document.querySelector('.arrow-left');
-          const rightArrow = document.querySelector('.arrow-right');
-
-          if (currentTestimonialGroup === 0) {
-            leftArrow.style.display = 'none';
-          } else {
-            leftArrow.style.display = 'flex';
-          }
-
-          if (currentTestimonialGroup === testimonials.children.length - 1) {
-            rightArrow.style.display = 'none';
-          } else {
-            rightArrow.style.display = 'flex';
-          }
-        }
-
-        updateArrowVisibility();
-
-        function sendEmail(event) {
-  event.preventDefault();
-  const serviceId = 'service_hvrcpls'; // Replace with your actual EmailJS service ID
-  const templateParams = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    message: document.getElementById('message').value
-  };
-
-  emailjs.sendForm('asVK_Gg6XDEIgWAlO', serviceId, '#contact-form', templateParams)
-    .then(function(response) {
-      console.log('Email sent successfully!', response.status, response.text);
-      document.getElementById('success-message').textContent = "Your message has landed safely in my inbox. You'll hear from me soon. I look forward to connecting with you!";
-      document.getElementById('success-message').style.display = 'block';
-      document.getElementById('contact-form').reset();
-    }, function(error) {
-      console.error('Error sending email:', error);
-      alert('An error occurred while sending the email. Please try again later.');
-    });
-}
-
-        function sendEmail(event) {
-  event.preventDefault();
-  const serviceId = 'service_hvrcpls'; // Replace with your actual EmailJS Service ID
-  const templateId = 'template_16xpfar'; // Replace with your actual EmailJS Template ID
-  const templateParams = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    message: document.getElementById('message').value
-  };
-
-  emailjs.sendForm('asVK_Gg6XDEIgWAlO', serviceId, '#contact-form', templateParams)
-    .then(function(response) {
-      console.log('Email sent successfully!', response.status, response.text);
-      document.getElementById('success-message').textContent = "Your message has landed safely in my inbox. You'll hear from me soon. I look forward to connecting with you!";
-      document.getElementById('success-message').style.display = 'block';
-      document.getElementById('contact-form').reset();
-    }, function(error) {
-      console.error('Error sending email:', error);
-      alert('An error occurred while sending the email. Please try again later.');
-    });
-}
+      }
     </script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </body>
 </html>
