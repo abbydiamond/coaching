@@ -120,13 +120,18 @@
             flex: 0 0 100%;
             display: flex;
             justify-content: space-between;
+            min-width: 100%;
         }
         .testimonial {
-            flex: 0 0 30%;
+            flex: 0 0 calc(33.33% - 20px);
             padding: 30px;
             background-color: #f7f6f3;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+        .testimonial:last-child {
+            margin-right: 0;
         }
         .testimonial p {
             margin-bottom: 15px;
@@ -168,16 +173,9 @@
             <h2><span class="emoji">👋</span>Hello, systems thinker.</h2>
             <p>If you love life optimization and hate not having enough time for what matters most, I can help you. My executive coaching methodology centers around experiments that put creativity at the forefront of professional and personal endeavors. This approach to lifestyle design propels leaders toward greater impact and deeper fulfillment.</p>
         </section>
+        
         <section>
-            <h2><span class="emoji">🚀</span>Getting started is simple</h2>
-            <ul class="getting-started">
-                <li><strong>Step 1:</strong> Establish key targets during a systems thinking session with me</li>
-                <li><strong>Step 2:</strong> Design a life experiment, choose a start and end date and press go</li>
-                <li><strong>Step 3:</strong> Follow up call at the completion of your life experiment</li>
-            </ul>
-        </section>
-        <section>
-            <h2><span class="emoji">🗺️</span>Choose your adventure</h2>
+            <h2><span class="emoji">🗺️</span>How it works</h2>
             <ul class="adventure-list">
                 <li>
                     <strong>1:1 session</strong>
@@ -196,25 +194,29 @@
             </ul>
         </section>
         <section>
+            <h2><span class="emoji">🚀</span>Getting started is simple</h2>
+            <ul class="getting-started">
+                <li><strong>Step 1:</strong> Establish key targets during a systems thinking session with me</li>
+                <li><strong>Step 2:</strong> Design a life experiment, choose a start and end date and press go</li>
+                <li><strong>Step 3:</strong> Follow up call at the completion of your life experiment</li>
+            </ul>
+        </section>
+        <section>
             <h2><span class="emoji">💬</span>Testimonials</h2>
             <div class="testimonials-container">
                 <div class="testimonials">
                     <div class="testimonial-group">
                         <div class="testimonial">
-                            <p>"As an executive coach, Abby Diamond is outside of the box. I would describe her coaching style as profoundly engaged, vibrant, alive, compassionate, fresh, and innovative."</p>
-                            <cite>- Mira Lathrop, Senior Consultant @ Vanto Group</cite>
+                            <p>"Abby is one of the most effective coaches (tactical tools with strategic goals) I have ever worked with."</p>
+                            <cite>- Sunil Kanderi, Co-founder and Managing Director at Nagarro</cite>
                         </div>
                         <div class="testimonial">
                             <p>"Abby has a gift. She created a safe space during our breakthrough executive coaching session where my true self expression showed up. After the session, I feel unstoppable."</p>
                             <cite>- Anas Atfi, Creating Generational Wealth Through Residential Mortgages One Family and Investor AT A Time</cite>
                         </div>
                         <div class="testimonial">
-                            <p>"[Abby] understands me at a level deeper than many of my family members. She is not afraid to explore the depths and is able to challenge the status quo of my disempowering beliefs. She also helps me see the impact I have in the world and how to leverage my community/relationships in a way that is authentic and empowering. Her genuine curiosity and drive to become better are inspiring. [...] What Abby does best is creativity and asking the difficult questions. She's a true testament to testing the waters and not being afraid to execute on her vision, creating something from nothing. If you are seeking a coach who genuinely cares there is nobody better than AD!"</p>
+                            <p>"Abby is a dear friend of mine, and it's been incredible to see her evolution. She understands me at a level deeper than many of my family members. She's not afraid to explore the depths and is able to challenge the status quo of my disempowering beliefs. She also helps me see the impact I have in the world and how to leverage my community/relationships in a way that is authentic and empowering. Her genuine curiosity and drive to become better are inspiring. It's been a privilege to witness not only her growth but also how her leadership has flourished through real-world practice (designing the executive coaching curriculum at Athena, etc). What Abby does best is creativity and asking the difficult questions. She's a true testament to testing the waters and not being afraid to execute on her vision, creating something from nothing. Feel free to reach out to me with any questions, I'll be more than glad to answer them. If you are seeking a coach who genuinely cares there is nobody better than AD!"</p>
                             <cite>- Davidson Hang, I coach SDRs get promoted to AEs | Managing Partner at Valenta</cite>
-                        </div>
-                        <div class="testimonial">
-                            <p>"After my breakthrough executive coaching session with Abby, I feel like a weight has been lifted. Reading business books can feel so black and white, but Abby's energy and her friendliness brought these ideas to life. Her coaching brought meaning, energy, and vibrance. Because of our session, the conceptual business goals that I initially brought to her have now become a clear, simple framework that I can follow and always reference."</p>
-                            <cite>- Lanette Radi, I help business owners keep their finances clean, fresh, and sparkly enabling them to focus on expansion without having to worry about the stress of disorganized books or daunting tax seasons.</cite>
                         </div>
                     </div>
                     <div class="testimonial-group">
@@ -232,20 +234,17 @@
                         </div>
                     </div>
                     <div class="testimonial-group">
-                        
+                        <div class="testimonial">
+                            <p>"After my breakthrough executive coaching session with Abby, I feel like a weight has been lifted. Reading business books can feel so black and white, but Abby's energy and her friendliness brought these ideas to life. Her coaching brought meaning, energy, and vibrance. Because of our session, the conceptual business goals that I initially brought to her have now become a clear, simple framework that I can follow and always reference."</p>
+                            <cite>- Lanette Radi, I help business owners keep their finances clean, fresh, and sparkly enabling them to focus on expansion without having to worry about the stress of disorganized books or daunting tax seasons.</cite>
+                        </div>
                         <div class="testimonial">
                             <p>"Abby is an exceptional coach. I've worked with her for the better part of a year on delegation strategy, time management, and aligning my profession with what truly energizes me. She's frameworked, thoughtful, and a great partner."</p>
                             <cite>- Nitin Gupta, VP, Strategy & BD at Pave</cite>
                         </div>
                         <div class="testimonial">
-                            <p>"Abby is one of the most effective coaches (tactical tools with strategic goals) I have ever worked with."</p>
-                            <cite>- Sunil Kanderi, Co-founder and Managing Director at Nagarro</cite>
-                            </div>
-                            <div class="testimonial">
-                                <p>"After my breakthrough executive coaching session with Abby, I feel like a weight has been lifted. Reading business books can feel so black and white, but Abby's energy and her friendliness brought these ideas to life. Her coaching brought meaning, energy, and vibrance. Because of our session, the conceptual business goals that I initially brought to her have now become a clear, simple framework that I can follow and always reference."</p>
-                                <cite>- Lanette Radi, I help business owners keep their finances clean, fresh, and sparkly enabling them to focus on expansion without having to worry about the stress of disorganized books or daunting tax seasons.</cite>
-                            
-
+                            <p>"As an executive coach, Abby Diamond is outside of the box. I would describe her coaching style as profoundly engaged, vibrant, alive, compassionate, fresh, and innovative."</p>
+                            <cite>- Mira Lathrop, Senior Consultant @ Vanto Group</cite>
                         </div>
                     </div>
                 </div>
