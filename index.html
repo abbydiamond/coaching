@@ -269,11 +269,11 @@
         <section>
   <h2><span class="emoji">✅</span>Get in touch</h2>
 
-  <form id="contact-form" data-service-id="your_service_id" data-template-params='{"from_name": "Your Name", "reply_to": "helloabbydiamond@gmail.com"}' onsubmit="sendEmail(event)">
-    <input type="text" id="name" name="name" placeholder="Full name" required>
-    <input type="email" id="email" name="email" placeholder="Email" required>
-    <input type="tel" id="phone" name="phone" placeholder="Phone number">
-    <textarea id="message" name="message" placeholder="Share anything"></textarea>
+  <form class="contact-form" id="contact-form" onsubmit="sendEmail(event)">
+    <input type="text" id="name" placeholder="Full name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="tel" id="phone" placeholder="Phone number">
+    <textarea id="message" placeholder="Share anything"></textarea>
     <button type="submit">Let's build.</button>
   </form>
 
@@ -320,14 +320,26 @@
   event.preventDefault();
 
   const serviceId = 'service_hvrcpls'; // Replace with your actual EmailJS service ID
-  const contactForm = document.getElementById('contact-form');
+  const templateId = ''; // Replace with your actual EmailJS template ID (optional)
 
-  emailjs.sendForm(serviceId, contactForm, contactForm)
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const message = document.getElementById('message').value;
+
+  const templateParams = {
+    name: name,
+    email: email,
+    phone: phone,
+    message: message
+  };
+
+  emailjs.send(serviceId, templateId, templateParams)
     .then(function(response) {
       console.log('Email sent successfully!', response.status, response.text);
       document.getElementById('success-message').textContent = "Your message has landed safely in my inbox. You'll hear from me soon. I look forward to connecting with you!";
       document.getElementById('success-message').style.display = 'block';
-      contactForm.reset();
+      document.getElementById('contact-form').reset();
     }, function(error) {
       console.error('Error sending email:', error);
       alert('An error occurred while sending the email. Please try again later.');
