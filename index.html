@@ -280,27 +280,37 @@
         }
 
         function sendEmail(event) {
-            event.preventDefault();
+  event.preventDefault();
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const message = document.getElementById('message').value;
 
-            const emailBody = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+  const formData = new FormData();
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('phone', phone);
+  formData.append('message', message);
 
-            const mailtoLink = `mailto:helloabbydiamond@gmail.com?subject=New Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
-
-            window.location.href = mailtoLink;
-
-            document.getElementById('success-message').textContent = "Your message has landed safely in my inbox. You'll hear from me soon. I look forward to connecting with you!";
-            document.getElementById('success-message').style.display = 'block';
-
-            document.getElementById('name').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('phone').value = '';
-            document.getElementById('message').value = '';
-        }
+  fetch('send_email.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(result => {
+    document.getElementById('success-message').textContent = "Your message has landed safely in my inbox. You'll hear from me soon. I look forward to connecting with you!";
+    document.getElementById('success-message').style.display = 'block';
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('message').value = '';
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('An error occurred while sending the email. Please try again later.');
+  });
+}
     </script>
 </body>
 </html>
