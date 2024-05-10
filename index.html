@@ -318,23 +318,16 @@
 
         function sendEmail(event) {
   event.preventDefault();
-
   const serviceId = 'service_hvrcpls'; // Replace with your actual EmailJS service ID
   const templateId = ''; // Replace with your actual EmailJS template ID (optional)
-
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const message = document.getElementById('message').value;
-
   const templateParams = {
-    name: name,
-    email: email,
-    phone: phone,
-    message: message
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    phone: document.getElementById('phone').value,
+    message: document.getElementById('message').value
   };
 
-  emailjs.send(serviceId, templateId, templateParams)
+  emailjs.sendForm('asVK_Gg6XDEIgWAlO', serviceId, '#contact-form', templateParams)
     .then(function(response) {
       console.log('Email sent successfully!', response.status, response.text);
       document.getElementById('success-message').textContent = "Your message has landed safely in my inbox. You'll hear from me soon. I look forward to connecting with you!";
