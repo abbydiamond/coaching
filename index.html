@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Experiments</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin: 0;
+            font-size: 48px;
+            color: #333;
+        }
+        h2.subtitle {
+            font-size: 24px;
+            color: #666;
+            margin-top: 10px;
+        }
+        section {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        section:hover {
+            background-color: #f5f5f5;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 32px;
+        }
+        section p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .getting-started li {
+            font-size: 20px;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 30px 0;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f7f6f3;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form input:hover,
+        .contact-form textarea:hover {
+            background-color: #eae9e6;
+        }
+        .contact-form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .emoji {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .adventure-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .adventure-list li {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .adventure-list li strong {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .adventure-list li ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .testimonials-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonials {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .testimonial-group {
+            flex: 0 0 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .testimonial {
+            flex: 0 0 30%;
+            padding: 30px;
+            background-color: #f7f6f3;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial p {
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        .testimonial cite {
+            font-weight: bold;
+            font-style: normal;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="abby.jpeg" alt="Abby" class="profile-image">
+        <h1>Abby Diamond</h1>
+        <h2 class="subtitle">Executive &amp; Founder Coach</h2>
+    </header>
+    <main>
+        <section>
+            <h2><span class="emoji">👋</span>Hello, systems thinker.</h2>
+            <p>If you love life optimization and hate not having enough time for what matters most, I can help you. My executive coaching methodology centers around experiments that put creativity at the forefront of professional and personal endeavors. This approach to lifestyle design propels leaders toward greater impact and deeper fulfillment.</p>
+        </section>
+        <section>
+            <h2><span class="emoji">🚀</span>Getting started is simple</h2>
+            <ul class="getting-started">
+                <li><strong>Step 1:</strong> Establish key targets during a systems thinking session with me</li>
+                <li><strong>Step 2:</strong> Design a life experiment, choose a start and end date and press go</li>
+                <li><strong>Step 3:</strong> Follow up call at the completion of your life experiment</li>
+            </ul>
+        </section>
+        <section>
+            <h2><span class="emoji">🗺️</span>Choose your adventure</h2>
+            <ul class="adventure-list">
+                <li>
+                    <strong>1:1 session</strong>
+                    <ul>
+                        <li>Initial 30-minute systems thinking session</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Life experiment</strong>
+                    <ul>
+                        <li>Initial 30-minute systems thinking session</li>
+                        <li>Half day personal retreat to design a life experiment for your life</li>
+                        <li>50-minute follow-up session</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2><span class="emoji">💬</span>Testimonials</h2>
+            <div class="testimonials-container">
+                <div class="testimonials">
+                    <div class="testimonial-group">
+                        <div class="testimonial">
+                            <p>"As an executive coach, Abby Diamond is outside of the box. I would describe her coaching style as profoundly engaged, vibrant, alive, compassionate, fresh, and innovative."</p>
+                            <cite>- Mira Lathrop, Senior Consultant @ Vanto Group</cite>
+                        </div>
+                        <div class="testimonial">
+                            <p>"Abby has a gift. She created a safe space during our breakthrough executive coaching session where my true self expression showed up. After the session, I feel unstoppable."</p>
+                            <cite>- Anas Atfi, Creating Generational Wealth Through Residential Mortgages One Family and Investor AT A Time</cite>
+                        </div>
+                        <div class="testimonial">
+                            <p>"[Abby] understands me at a level deeper than many of my family members. She is not afraid to explore the depths and is able to challenge the status quo of my disempowering beliefs. She also helps me see the impact I have in the world and how to leverage my community/relationships in a way that is authentic and empowering. Her genuine curiosity and drive to become better are inspiring. [...] What Abby does best is creativity and asking the difficult questions. She's a true testament to testing the waters and not being afraid to execute on her vision, creating something from nothing. If you are seeking a coach who genuinely cares there is nobody better than AD!"</p>
+                            <cite>- Davidson Hang, I coach SDRs get promoted to AEs | Managing Partner at Valenta</cite>
+                        </div>
+                        <div class="testimonial">
+                            <p>"After my breakthrough executive coaching session with Abby, I feel like a weight has been lifted. Reading business books can feel so black and white, but Abby's energy and her friendliness brought these ideas to life. Her coaching brought meaning, energy, and vibrance. Because of our session, the conceptual business goals that I initially brought to her have now become a clear, simple framework that I can follow and always reference."</p>
+                            <cite>- Lanette Radi, I help business owners keep their finances clean, fresh, and sparkly enabling them to focus on expansion without having to worry about the stress of disorganized books or daunting tax seasons.</cite>
+                        </div>
+                    </div>
+                    <div class="testimonial-group">
+                        <div class="testimonial">
+                            <p>"During my one hour executive coaching session with Abby, I accomplished something that probably would have taken me a year otherwise. The session was brilliant. Super, super helpful. I'm kind of blown away. I feel really excited and at peace at the same time. Abby, I appreciate you for this conversation - for seeing the potential in my business, pulling me forward, and creating an easy path for my team to take all of the needed next steps. You really broke the goal down into very specific action items and ongoing rituals so that my team knows exactly what they need to do. You made it so easy!"</p>
+                            <cite>- Julie Tran, Women-Centered Marriage Coach</cite>
+                        </div>
+                        <div class="testimonial">
+                            <p>"Abby Diamond, you're an absolute miracle of a human. My whole career, I've been gassed up by all these coaches telling me "you can do this!" but you're the only coach who has given me realistic, strategic, practical, pragmatic focus so that what I'm building can sustain itself. Executive coaching with you created friction that allowed me to light a spark that has now spread into wildfire. It's such a feeling of excitement and incentive to create impact and lasting change in the world. Thank you!!"</p>
+                            <cite>- Alexander Stoeber, Dreaming every goal into a game worth winning</cite>
+                        </div>
+                        <div class="testimonial">
+                            <p>"Abby Diamond is one of the best coaches I have ever worked with. Her perspective is unlimited and magical. She is empathetic, while uncompromising in the way she listens to me as someone who can create powerfully in my life."</p>
+                            <cite>- Meghann White, Founder at To The Mountain Shuts</cite>
+                        </div>
+                    </div>
+                    <div class="testimonial-group">
+                        
+                        <div class="testimonial">
+                            <p>"Abby is an exceptional coach. I've worked with her for the better part of a year on delegation strategy, time management, and aligning my profession with what truly energizes me. She's frameworked, thoughtful, and a great partner."</p>
+                            <cite>- Nitin Gupta, VP, Strategy & BD at Pave</cite>
+                        </div>
+                        <div class="testimonial">
+                            <p>"Abby is one of the most effective coaches (tactical tools with strategic goals) I have ever worked with."</p>
+                            <cite>- Sunil Kanderi, Co-founder and Managing Director at Nagarro</cite>
+                            </div>
+                            <div class="testimonial">
+                                <p>"After my breakthrough executive coaching session with Abby, I feel like a weight has been lifted. Reading business books can feel so black and white, but Abby's energy and her friendliness brought these ideas to life. Her coaching brought meaning, energy, and vibrance. Because of our session, the conceptual business goals that I initially brought to her have now become a clear, simple framework that I can follow and always reference."</p>
+                                <cite>- Lanette Radi, I help business owners keep their finances clean, fresh, and sparkly enabling them to focus on expansion without having to worry about the stress of disorganized books or daunting tax seasons.</cite>
+                            
+
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow arrow-left" onclick="showPreviousTestimonials()">&lt;</button>
+                <button class="arrow arrow-right" onclick="showNextTestimonials()">&gt;</button>
+            </div>
+        </section>
+        <section>
+            <h2><span class="emoji">✅</span>Get in touch</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Full name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone number">
+                <textarea placeholder="Share anything"></textarea>
+                <button type="submit">Let's build.</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        const testimonials = document.querySelector('.testimonials');
+        const testimonialGroupWidth = testimonials.querySelector('.testimonial-group').offsetWidth;
+        let currentTestimonialGroup = 0;
+
+        function showNextTestimonials() {
+            currentTestimonialGroup = (currentTestimonialGroup + 1) % (testimonials.children.length);
+            testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
+        }
+
+        function showPreviousTestimonials() {
+            currentTestimonialGroup = (currentTestimonialGroup - 1 + testimonials.children.length) % (testimonials.children.length);
+            testimonials.style.transform = `translateX(-${currentTestimonialGroup * testimonialGroupWidth}px)`;
+        }
+    </script>
+</body>
+</html>
