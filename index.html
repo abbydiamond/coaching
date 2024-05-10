@@ -266,19 +266,15 @@
                 <button class="arrow arrow-right" onclick="showNextTestimonials()">&gt;</button>
             </div>
         </section>
-        <section>
-  <h2><span class="emoji">✅</span>Get in touch</h2>
-
-  <form class="contact-form" id="contact-form" onsubmit="sendEmail(event)">
-    <input type="text" id="name" placeholder="Full name" required>
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="tel" id="phone" placeholder="Phone number">
-    <textarea id="message" placeholder="Share anything"></textarea>
-    <button type="submit">Let's build.</button>
-  </form>
-
-  <div id="success-message" class="success-message" style="display: none;"></div>
-</section>
+        <section class="banner" style="display: flex; justify-content: space-between; align-items: center; background-color: #e8f4f8; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'Helvetica', sans-serif;">
+      <div style="flex: 1; padding-right: 20px;">
+          <h2>📞 Get in touch</h2>
+          <p style="font-size: 18px;">Define your life experiment, set value-driven goals, and create a massive action plan with me.</p>
+      </div>
+      <a href="https://calendly.com/your-calendly-link" target="_blank" style="background-color: #007BFF; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-size: 18px;">
+          Schedule your discovery call now
+      </a>
+  </section>
     </main>
     <script>
         const testimonials = document.querySelector('.testimonials');
