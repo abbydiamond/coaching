@@ -4,168 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life Experiments</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #fff;
-        }
-        header {
-            text-align: center;
-            padding: 40px 0;
-            background-color: #fff;
-            border-radius: 10px;
-        }
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            margin: 0;
-            font-size: 48px;
-            color: #333;
-        }
-        h2.subtitle {
-            font-size: 24px;
-            color: #666;
-            margin-top: 10px;
-        }
-        section {
-            background-color: #fff;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        section:hover {
-            background-color: #f5f5f5;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        section h2 {
-            margin-top: 0;
-            color: #333;
-            font-size: 32px;
-        }
-        section p {
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-        .getting-started li {
-            font-size: 20px;
-        }
-        .contact-form {
-            max-width: 500px;
-            margin: 30px 0;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #f7f6f3;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-        .contact-form input:hover,
-        .contact-form textarea:hover {
-            background-color: #eae9e6;
-        }
-        .contact-form button {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 15px 30px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-        .emoji {
-            font-size: 24px;
-            margin-right: 10px;
-        }
-        .adventure-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .adventure-list li {
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-        .adventure-list li strong {
-            display: block;
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-        .adventure-list li ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-        
-        .testimonials-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-gap: 20px;
-      }
-
-      .testimonial-card {
-        background-color: #f7f6f3;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-      }
-
-      .testimonial-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .testimonial-excerpt {
-        font-style: italic;
-        margin-bottom: 10px;
-      }
-
-      .testimonial-author {
-        font-weight: bold;
-      }
-
-      .testimonial-details {
-        display: none;
-        margin-top: 20px;
-      }
-
-      .testimonial-details p {
-        margin-bottom: 10px;
-      }
-
-      .testimonial-card.hidden {
-        display: none;
-      }
-
-      .show-more-btn {
-        display: block;
-        margin: 20px auto;
-        padding: 10px 20px;
-        background-color: #333;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 18px;
-        cursor: pointer;
-      }
-
-      .testimonial-details.show {
-        display: block;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -173,6 +12,7 @@
         <h1>Abby Diamond</h1>
         <h2 class="subtitle">Executive &amp; Founder Coach</h2>
     </header>
+
     <main>
         <section>
             <h2><span class="emoji">👋</span>Hello, systems thinker.</h2>
@@ -203,7 +43,7 @@
 
         <section>
             <h2><span class="emoji">✅</span>Getting Started is Simple</h2>
-            <ol class="getting-started">
+            <ul class="getting-started">
                 <li>
                     <strong>Step 1: Book a Discovery Call</strong>
                     <p>Schedule an introductory call to discuss your aspirations and how my coaching can help. This call sets the foundation for our collaboration.</p>
@@ -216,97 +56,130 @@
                     <strong>Step 3: Review and Reflect</strong>
                     <p>After completing your plan, we reconvene to assess the results and distill key learnings.</p>
                 </li>
-            </ol>
+            </ul>
         </section>
+
         <section>
-    <h2><span class="emoji">💬</span>Testimonials</h2>
-    <div class="testimonials-container">
-      <div class="testimonial-card">
-        <p class="testimonial-excerpt">"Abby is one of the most effective coaches (tactical tools with strategic goals) I have ever worked with."</p>
-        <cite class="testimonial-author">- Sunil Kanderi, Co-founder and Managing Director at Nagarro</cite>
-      </div>
+            <h2><span class="emoji">💬</span>Testimonials</h2>
+            <div class="testimonials-container">
+                <!-- Testimonial cards will be dynamically added here -->
+            </div>
+            <div class="navigation-buttons">
+                <button class="toggle-button active" onclick="showTestimonials(0)"></button>
+                <button class="toggle-button" onclick="showTestimonials(3)"></button>
+                <button class="toggle-button" onclick="showTestimonials(6)"></button>
+            </div>
+        </section>
 
-      <div class="testimonial-card">
-        <p class="testimonial-excerpt">"Abby has a gift. She created a safe space during our breakthrough executive coaching session where my true self expression showed up. After the session, I feel unstoppable."</p>
-        <cite class="testimonial-author">- Anas Atfi, Creating Generational Wealth Through Residential Mortgages One Family and Investor AT A Time</cite>
-      </div>
+        <section class="banner">
+            <div>
+                <div style="flex: 1; padding-right: 20px;">
+                    <h2>📞 Get in touch</h2>
+                    <p>Define your life experiment, set value-driven goals, and create a massive action plan with me.</p>
+                </div>
+                <a href="https://calendly.com/your-calendly-link" target="_blank">
+                    Schedule your discovery call now
+                </a>
+            </div>
+        </section>
+    </main>
 
-      <div class="testimonial-card">
-        <p class="testimonial-excerpt">"Abby understands me at a level deeper than many of my family members. She's not afraid to explore the depths and is able to challenge the status quo of my disempowering beliefs."</p>
-        <cite class="testimonial-author">- Davidson Hang, I coach SDRs get promoted to AEs | Managing Partner at Valenta</cite>
-      </div>
-
-      <div class="testimonial-card hidden">
-        <p class="testimonial-excerpt">"During my one hour executive coaching session with Abby, I accomplished something that probably would have taken me a year otherwise. The session was brilliant. Super, super helpful. I'm kind of blown away."</p>
-        <cite class="testimonial-author">- Julie Tran, Women-Centered Marriage Coach</cite>
-      </div>
-
-      <div class="testimonial-card hidden">
-        <p class="testimonial-excerpt">"Abby Diamond, you're an absolute miracle of a human. My whole career, I've been gassed up by all these coaches telling me "you can do this!" but you're the only coach who has given me realistic, strategic, practical, pragmatic focus so that what I'm building can sustain itself."</p>
-        <cite class="testimonial-author">- Alexander Stoeber, Dreaming every goal into a game worth winning</cite>
-      </div>
-
-      <div class="testimonial-card hidden">
-        <p class="testimonial-excerpt">"Abby Diamond is one of the best coaches I have ever worked with. Her perspective is unlimited and magical. She is empathetic, while uncompromising in the way she listens to me as someone who can create powerfully in my life."</p>
-        <cite class="testimonial-author">- Meghann White, Founder at To The Mountain Shuts</cite>
-      </div>
-
-      <div class="testimonial-card hidden">
-        <p class="testimonial-excerpt">"After my breakthrough executive coaching session with Abby, I feel like a weight has been lifted. Reading business books can feel so black and white, but Abby's energy and her friendliness brought these ideas to life."</p>
-        <cite class="testimonial-author">- Lanette Radi, I help business owners keep their finances clean, fresh, and sparkly enabling them to focus on expansion without having to worry about the stress of disorganized books or daunting tax seasons.</cite>
-      </div>
-
-      <div class="testimonial-card hidden">
-        <p class="testimonial-excerpt">"Abby is an exceptional coach. I've worked with her for the better part of a year on delegation strategy, time management, and aligning my profession with what truly energizes me. She's frameworked, thoughtful, and a great partner."</p>
-        <cite class="testimonial-author">- Nitin Gupta, VP, Strategy &amp; BD at Pave</cite>
-      </div>
-
-      <div class="testimonial-card hidden">
-        <p class="testimonial-excerpt">"As an executive coach, Abby Diamond is outside of the box. I would describe her coaching style as profoundly engaged, vibrant, alive, compassionate, fresh, and innovative."</p>
-        <cite class="testimonial-author">- Mira Lathrop, Senior Consultant @ Vanto Group</cite>
-      </div>
-    </div>
-
-    <button class="show-more-btn" onclick="showMoreTestimonials()">Show More</button>
-  </section>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
-  <section class="banner" style="display: flex; justify-content: space-between; align-items: center; background-color: #e8f4f8; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'Helvetica', sans-serif;">
-      <div style="flex: 1; padding-right: 20px;">
-          <h2>📞 Get in touch</h2>
-          <p style="font-size: 18px;">Define your life experiment, set value-driven goals, and create a massive action plan with me.</p>
-      </div>
-      <a href="https://calendly.com/your-calendly-link" target="_blank" style="background-color: #007BFF; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-size: 18px;">
-          Schedule your discovery call now
-      </a>
-  </section>
-
-
-
-
-</main>
     <script>
-      function toggleTestimonialDetails(card) {
-        const details = card.querySelector('.testimonial-details');
-        details.classList.toggle('show');
-      }
-
-      function showMoreTestimonials() {
-        const hiddenTestimonials = document.querySelectorAll('.testimonial-card.hidden');
-        const showMoreBtn = document.querySelector('.show-more-btn');
-
-        if (hiddenTestimonials.length > 0) {
-          hiddenTestimonials.forEach((testimonial, index) => {
-            if (index < 3) {
-              testimonial.classList.remove('hidden');
+        const testimonials = [
+            {
+                author: "Sunil Kanderi",
+                position: "Co-founder and Managing Director @Nagarro",
+                excerpt: "Abby is one of the most effective coaches (tactical tools with strategic goals) I have ever worked with.",
+                avatar: "avatar1.jpg"
+            },
+            {
+                author: "Anas Atfi",
+                position: "Loan Officer @CrossCountry Mortgage",
+                excerpt: "Abby has a gift. She created a safe space during our breakthrough executive coaching session where my true self expression showed up. After the session, I feel unstoppable.",
+                avatar: "avatar2.jpg"
+            },
+            {
+                author: "Davidson Hang",
+                position: "Managing Partner @Valenta",
+                excerpt: "Abby understands me at a level deeper than many of my family members. She's not afraid to explore the depths and is able to challenge the status quo of my disempowering beliefs.",
+                avatar: "avatar3.jpg"
+            },
+            {
+                author: "Julie Tran",
+                position: "Women-Centered Marriage Coach",
+                excerpt: "During my one hour executive coaching session with Abby, I accomplished something that probably would have taken me a year otherwise. The session was brilliant. Super, super helpful. I'm kind of blown away.",
+                avatar: "julie.jpg"
+            },
+            {
+                author: "Alexander Stoeber",
+                position: "Founder & CEO @Elevata",
+                excerpt: "Abby Diamond, you're an absolute miracle of a human. My whole career, I've been gassed up by all these coaches telling me 'you can do this!' but you're the only coach who has given me realistic, strategic, practical, pragmatic focus so that what I'm building can sustain itself.",
+                avatar: "alex.jpg"
+            },
+            {
+                author: "Meghann White",
+                position: "Founder @To The Mountain Shuttle",
+                excerpt: "Abby Diamond is one of the best coaches I have ever worked with. Her perspective is unlimited and magical. She is empathetic, while uncompromising in the way she listens to me as someone who can create powerfully in my life.",
+                avatar: "meg.jpg"
+            },
+            {
+                author: "Lanette Radi",
+                position: "Business Specialist",
+                excerpt: "After my breakthrough executive coaching session with Abby, I feel like a weight has been lifted. Reading business books can feel so black and white, but Abby's energy and her friendliness brought these ideas to life.",
+                avatar: "lanette.jpg"
+            },
+            {
+                author: "Nitin Gupta",
+                position: "VP, Strategy & BD @Pave",
+                excerpt: "Abby is an exceptional coach. I've worked with her for the better part of a year on delegation strategy, time management, and aligning my profession with what truly energizes me. She's frameworked, thoughtful, and a great partner.",
+                avatar: "nitin.jpg"
+            },
+            {
+                author: "Mira Lathrop",
+                position: "Senior Consultant @Vanto Group",
+                excerpt: "As an executive coach, Abby Diamond is outside of the box. I would describe her coaching style as profoundly engaged, vibrant, alive, compassionate, fresh, and innovative.",
+                avatar: "mira.jpg"
             }
-          });
+        ];
+
+        const testimonialsContainer = document.querySelector('.testimonials-container');
+        let currentIndex = 0;
+
+        function createTestimonialCard(testimonial) {
+            return `
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="${testimonial.avatar}" alt="${testimonial.author}" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-author">${testimonial.author}</div>
+                            <div class="testimonial-position">${testimonial.position}</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-excerpt">"${testimonial.excerpt}"</p>
+                </div>
+            `;
         }
 
-        if (document.querySelectorAll('.testimonial-card.hidden').length === 0) {
-          showMoreBtn.style.display = 'none';
+        function showTestimonials(startIndex) {
+            testimonialsContainer.innerHTML = '';
+            for (let i = startIndex; i < startIndex + 3 && i < testimonials.length; i++) {
+                const testimonialCard = createTestimonialCard(testimonials[i]);
+                testimonialsContainer.innerHTML += testimonialCard;
+            }
+
+            const toggleButtons = document.querySelectorAll('.toggle-button');
+            toggleButtons.forEach((button, index) => {
+                if (index === Math.floor(startIndex / 3)) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+
+            currentIndex = startIndex;
         }
-      }
+
+        showTestimonials(0);
     </script>
 </body>
 </html>
