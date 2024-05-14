@@ -1,3 +1,5 @@
+/* Add this to your CSS file */
+
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.6;
@@ -191,4 +193,21 @@ section p {
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column;
+    }
+
+    .testimonial-card {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .navigation-buttons {
+        display: none; /* Hide navigation buttons on mobile */
+    }
 }
